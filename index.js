@@ -1,8 +1,8 @@
 var methods = {};
 
-methods.concat = function(user_id, token, geo) {
+methods.concat = function(content) {
 	console.log("this is test");
-	return "Response: " + user_id +"  "+ token + "    " + geo;
+	return "Response: " + content;
 };
 
 exports.data = methods;

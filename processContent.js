@@ -11,7 +11,6 @@ methods.processContent = function(content) {
 		var temp = content[i];
 		processCont[i] = {};
 		for (var key in temp) {
-			
 			if (key == 'Visit_ID' || key == 'Patient_ID' || key == 'Site_Investigator_ID' || key == 'Trail_ID' || key == 'Visit_Date' || key == 'Visit_Time_Out' || key == 'Visit_Time_In') 
 				processCont[i][key] = temp[key];
 			else
