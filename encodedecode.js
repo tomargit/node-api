@@ -17,8 +17,8 @@ methods.encodeContent = function(content) {
 
 
 methods.decodeContent = function(content) {
-	data = content;  
-	buff = new Buffer(data, 'base64');  
+	let data = content;  
+	let buff = new Buffer(data, 'base64');  
 	let text = buff.toString('ascii');
 	return text;
 }
