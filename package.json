@@ -4,9 +4,11 @@
   "description": "",
   "main": "server.js",
   "dependencies": {
+    "async": "^2.6.0",
     "body-parser": "^1.18.2",
     "ejs": "^2.5.7",
-    "express": "~4.10.2",
+    "express": "^4.10.8",
+    "lodash": "^4.17.5",
     "web3": "^1.0.0-beta.30"
   },
   "scripts": {

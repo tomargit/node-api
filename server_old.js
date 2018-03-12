@@ -124,7 +124,7 @@ const abi = [
 	}
 ];
 
-var contractInstance = new web3.eth.Contract(abi,'0x3a323dfe284d2a2b23acb4b03fbcbc0e5be308a4');
+var contractInstance = new web3.eth.Contract(abi,'0x5e3c0769c801b2af1a9c7d62049f34364130c11d');
 
 var reply = "false";
 
@@ -140,7 +140,6 @@ app.post('/api/blockchain/', function(req, res) {
 	
 	//console.log(JSON.stringify(processContentJS.data.processContent(req.body)));
 	var processData = processContentJS.data.processContent(req.body);
-	console.log("request Body is"+JSON.stringify(req.body));
 	for (var key in processData) {
 		var encodeDataHash= encodeDecoder.data.encodeContent(JSON.stringify(processData[key]['data_hash']));
 		
@@ -149,9 +148,8 @@ app.post('/api/blockchain/', function(req, res) {
 		console.log("")
 		console.log("Encoded String : " +  encodeDataHash)
 		console.log("")
-		/*console.log("Decoded String : ");
-		console.log(encodeDecoder.data.decodeContent(encodeDataHash)); 
-		*/
+		console.log("Decoded String : ");
+		
 
 	}
 	res.send(processData);
@@ -218,16 +216,11 @@ var patientId = reqContent[0]['Patient_ID'];
     ],
     function (err, caption) {
         //console.log('1asynResult ------- ' + asynResult);
-		console.log('Comparison is **********  '+caption);
+		console.log('caption-----------'+caption);
         //asynResult = caption;
 		//console.log('2asynResult ------- ' + asynResult);
 		// Node.js and JavaScript Rock!
-		if(caption.length>0){
-			res.send("true");
-		}else{
-			res.send("false");
-		}
-		
+		res.send(caption);
     }
 	
 );
